@@ -5,7 +5,7 @@ class Solution(object):
         :rtype: bool
         """
         stack=[]
-        pair={
+        pairs={
             ')':'(',
             ']':'[',
             '}':'{'
@@ -16,7 +16,7 @@ class Solution(object):
             else:
                 if not stack:
                     return False
-                if stack[-1]!=pair[char]:
+                if stack[-1]!=pairs[char]:
                     return False
                 stack.pop()
         return len(stack)==0
